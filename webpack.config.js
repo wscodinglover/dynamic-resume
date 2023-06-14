@@ -36,15 +36,15 @@ module.exports = {
                 loader: 'babel-loader'
             }]
         }, {
-            test: /\.(scss|css)$/,
+            test: /\.css$/,
             use: ExtractTextPlugin.extract({
-                use: ['css-loader', 'sass-loader'],
+                use: ['css-loader'],
                 fallback: 'style-loader'
             })
         }]
     },
     devServer: {
-        host: '127.0.0.1',
+        host: 'localhost',
         contentBase: path.resolve(__dirname, './dist'),
         historyApiFallback: true,
         open: true
